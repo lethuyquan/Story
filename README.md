@@ -2,9 +2,12 @@ Manual Installation
 Official Documentation
 Recommended Hardware: 6 Cores, 16GB RAM, 400GB of storage (NVME), 100 Mb/s
 
-# install dependencies, if needed
+**install dependencies, if needed**
+```
 sudo apt update && sudo apt upgrade -y
 sudo apt install curl git wget htop tmux build-essential jq make lz4 gcc unzip -y
+```
+
 Node Name
 Port
 52
