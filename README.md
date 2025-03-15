@@ -11,7 +11,8 @@ sudo apt install curl git wget htop tmux build-essential jq make lz4 gcc unzip -
 Node Name
 Port
 52
-# install go, if needed
+**install go, if needed**
+```
 cd $HOME
 VER="1.22.3"
 wget "https://golang.org/dl/go$VER.linux-amd64.tar.gz"
@@ -22,6 +23,7 @@ rm "go$VER.linux-amd64.tar.gz"
 echo "export PATH=$PATH:/usr/local/go/bin:~/go/bin" >> ~/.bash_profile
 source $HOME/.bash_profile
 [ ! -d ~/go/bin ] && mkdir -p ~/go/bin
+```
 
 # set vars
 echo "export MONIKER="test"" >> $HOME/.bash_profile
