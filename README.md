@@ -25,12 +25,13 @@ source $HOME/.bash_profile
 [ ! -d ~/go/bin ] && mkdir -p ~/go/bin
 ```
 
-# set vars
+**set vars**
+```
 echo "export MONIKER="test"" >> $HOME/.bash_profile
 echo "export STORY_CHAIN_ID="odyssey-0"" >> $HOME/.bash_profile
 echo "export STORY_PORT="52"" >> $HOME/.bash_profile
 source $HOME/.bash_profile
-
+```
 # download binaries
 cd $HOME
 wget -O geth https://github.com/piplabs/story-geth/releases/download/v0.11.0/geth-linux-amd64
