@@ -32,13 +32,15 @@ echo "export STORY_CHAIN_ID="odyssey-0"" >> $HOME/.bash_profile
 echo "export STORY_PORT="52"" >> $HOME/.bash_profile
 source $HOME/.bash_profile
 ```
-# download binaries
+**download binaries**
+```
 cd $HOME
 wget -O geth https://github.com/piplabs/story-geth/releases/download/v0.11.0/geth-linux-amd64
 chmod +x $HOME/geth
 mv $HOME/geth ~/go/bin/
 [ ! -d "$HOME/.story/story" ] && mkdir -p "$HOME/.story/story"
 [ ! -d "$HOME/.story/geth" ] && mkdir -p "$HOME/.story/geth"
+```
 
 # install Story
 cd $HOME
