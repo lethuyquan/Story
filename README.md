@@ -42,7 +42,8 @@ mv $HOME/geth ~/go/bin/
 [ ! -d "$HOME/.story/geth" ] && mkdir -p "$HOME/.story/geth"
 ```
 
-# install Story
+**install Story**
+```
 cd $HOME
 rm -rf story
 git clone https://github.com/piplabs/story
@@ -50,6 +51,7 @@ cd story
 git checkout v0.13.2
 go build -o story ./client 
 mv $HOME/story/story $HOME/go/bin/
+```
 
 # init story app
 story init --moniker test --network odyssey
