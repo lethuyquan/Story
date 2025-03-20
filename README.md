@@ -53,8 +53,10 @@ go build -o story ./client
 mv $HOME/story/story $HOME/go/bin/
 ```
 
-# init story app
+**init story app**
+```
 story init --moniker test --network odyssey
+```
 
 # set seeds and peers
 SEEDS="434af9dae402ab9f1c8a8fc15eae2d68b5be3387@story-testnet-seed.itrocket.net:29656"
