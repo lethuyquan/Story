@@ -68,10 +68,11 @@ PEERS="c2a6cc9b3fa468624b2683b54790eb339db45cbf@story-testnet-peer.itrocket.net:
 sed -i -e "/^\[p2p\]/,/^\[/{s/^[[:space:]]*seeds *=.*/seeds = \"$SEEDS\"/}" \
        -e "/^\[p2p\]/,/^\[/{s/^[[:space:]]*persistent_peers *=.*/persistent_peers = \"$PEERS\"/}" $HOME/.story/story/config/config.toml
 ```
-# download genesis and addrbook
+**download genesis and addrbook**
+```
 wget -O $HOME/.story/story/config/genesis.json https://server-7.itrocket.net/testnet/story/genesis.json
 wget -O $HOME/.story/story/config/addrbook.json  https://server-7.itrocket.net/testnet/story/addrbook.json
-
+```
 # set custom ports in story.toml file
 sed -i.bak -e "s%:1317%:${STORY_PORT}317%g;
 s%:8551%:${STORY_PORT}551%g" $HOME/.story/story/config/story.toml
