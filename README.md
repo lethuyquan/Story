@@ -79,12 +79,14 @@ sed -i.bak -e "s%:1317%:${STORY_PORT}317%g;
 s%:8551%:${STORY_PORT}551%g" $HOME/.story/story/config/story.toml
 ```
 
-# set custom ports in config.toml file
+**set custom ports in config.toml file**
+```
 sed -i.bak -e "s%:26658%:${STORY_PORT}658%g;
 s%:26657%:${STORY_PORT}657%g;
 s%:26656%:${STORY_PORT}656%g;
 s%^external_address = \"\"%external_address = \"$(wget -qO- eth0.me):${STORY_PORT}656\"%;
 s%:26660%:${STORY_PORT}660%g" $HOME/.story/story/config/config.toml
+```
 
 # enable prometheus and disable indexing
 sed -i -e "s/prometheus = false/prometheus = true/" $HOME/.story/story/config/config.toml
