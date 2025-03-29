@@ -11,9 +11,6 @@ sudo apt update && sudo apt upgrade -y
 sudo apt install curl git wget htop tmux build-essential jq make lz4 gcc unzip -y
 ```
 
-Node Name
-Port
-52
 **install go, if needed**
 ```
 cd $HOME
@@ -88,9 +85,11 @@ s%^external_address = \"\"%external_address = \"$(wget -qO- eth0.me):${STORY_POR
 s%:26660%:${STORY_PORT}660%g" $HOME/.story/story/config/config.toml
 ```
 
-# enable prometheus and disable indexing
+**enable prometheus and disable indexing**
+```
 sed -i -e "s/prometheus = false/prometheus = true/" $HOME/.story/story/config/config.toml
 sed -i -e "s/^indexer *=.*/indexer = \"null\"/" $HOME/.story/story/config/config.toml
+```
 
 # create geth servie file
 sudo tee /etc/systemd/system/story-geth.service > /dev/null <<EOF
