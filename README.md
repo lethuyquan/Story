@@ -91,7 +91,8 @@ sed -i -e "s/prometheus = false/prometheus = true/" $HOME/.story/story/config/co
 sed -i -e "s/^indexer *=.*/indexer = \"null\"/" $HOME/.story/story/config/config.toml
 ```
 
-# create geth servie file
+**create geth servie file**
+```
 sudo tee /etc/systemd/system/story-geth.service > /dev/null <<EOF
 [Unit]
 Description=Story Geth daemon
@@ -107,6 +108,7 @@ LimitNOFILE=65535
 [Install]
 WantedBy=multi-user.target
 EOF
+```
 
 # create story service file
 sudo tee /etc/systemd/system/story.service > /dev/null <<EOF
