@@ -110,7 +110,8 @@ WantedBy=multi-user.target
 EOF
 ```
 
-# create story service file
+**create story service file**
+```
 sudo tee /etc/systemd/system/story.service > /dev/null <<EOF
 [Unit]
 Description=Story Service
@@ -127,7 +128,7 @@ LimitNOFILE=65535
 [Install]
 WantedBy=multi-user.target
 EOF
-
+```
 # download snapshots
 # backup priv_validator_state.json
 cp $HOME/.story/story/data/priv_validator_state.json $HOME/.story/story/priv_validator_state.json.backup
