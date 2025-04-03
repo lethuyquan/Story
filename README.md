@@ -129,7 +129,8 @@ LimitNOFILE=65535
 WantedBy=multi-user.target
 EOF
 ```
-# download snapshots
+**download snapshots**
+
 # backup priv_validator_state.json
 cp $HOME/.story/story/data/priv_validator_state.json $HOME/.story/story/priv_validator_state.json.backup
 
