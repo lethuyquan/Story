@@ -181,14 +181,17 @@ rm "go$VER.linux-amd64.tar.gz"
 echo "export PATH=$PATH:/usr/local/go/bin:~/go/bin" >> ~/.bash_profile
 source $HOME/.bash_profile
 [ ! -d ~/go/bin ] && mkdir -p ~/go/bin
-Install and init Cosmovisor:
 ```
 
+**Install and init Cosmovisor:**
+```
 go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@latest
 echo "export DAEMON_NAME="story"" >> $HOME/.bash_profile
 echo "export DAEMON_HOME="$HOME/.story/story"" >> $HOME/.bash_profile
 source $HOME/.bash_profile
 cosmovisor init $(which story)
+```
+
 Create a directory and download the current version of story:
 
 mkdir -p $HOME/.story/story/cosmovisor/upgrades/v0.13.0/bin
