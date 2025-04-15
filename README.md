@@ -199,8 +199,8 @@ wget -O $HOME/.story/story/cosmovisor/upgrades/v0.13.0/bin/story https://github.
 chmod +x $HOME/.story/story/cosmovisor/upgrades/v0.13.0/bin/story
 ```
 
-Update service file:
-
+**Update service file:**
+```
 sudo tee /etc/systemd/system/story.service > /dev/null << EOF
 [Unit]
 Description=story node service
@@ -221,6 +221,8 @@ LimitNOFILE=65535
 [Install]
 WantedBy=multi-user.target
 EOF
+```
+
 Enable and start Story using Cosmovisor:
 
 sudo systemctl daemon-reload
