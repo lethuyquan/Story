@@ -223,11 +223,13 @@ WantedBy=multi-user.target
 EOF
 ```
 
-Enable and start Story using Cosmovisor:
-
+**Enable and start Story using Cosmovisor:**
+```
 sudo systemctl daemon-reload
 sudo systemctl enable story
 sudo systemctl restart story && sudo journalctl -u story -f
+```
+
 Congrats, you are now using Cosmovisor! 🎊
 Create validator
 View your validator key
