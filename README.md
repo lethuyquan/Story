@@ -230,15 +230,18 @@ sudo systemctl enable story
 sudo systemctl restart story && sudo journalctl -u story -f
 ```
 
-Congrats, you are now using Cosmovisor! 🎊
-Create validator
-View your validator key
 
+**Create validator**
+
+**View your validator key**
+```
 story validator export
+```
 Export EVM private key
 
 story validator export --export-evm-key
-View EVM private key and make a key backup
+
+**View EVM private key and make a key backup**
 
 cat $HOME/.story/story/config/private_key.txt
 Use this private key to import your account into a wallet, e.g. Metamask or Phantom. Add the odyssey testnet to your wallet via faucet. Then, copy your 'EVM address' from the wallet and request $IP tokens. Now you can see the balance and make transactions in the wallet app.
