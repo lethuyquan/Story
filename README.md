@@ -237,9 +237,11 @@ sudo systemctl restart story && sudo journalctl -u story -f
 ```
 story validator export
 ```
-Export EVM private key
 
+**Export EVM private key**
+```
 story validator export --export-evm-key
+```
 
 **View EVM private key and make a key backup**
 
