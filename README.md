@@ -244,8 +244,10 @@ story validator export --export-evm-key
 ```
 
 **View EVM private key and make a key backup**
-
+```
 cat $HOME/.story/story/config/private_key.txt
+```
+
 Use this private key to import your account into a wallet, e.g. Metamask or Phantom. Add the odyssey testnet to your wallet via faucet. Then, copy your 'EVM address' from the wallet and request $IP tokens. Now you can see the balance and make transactions in the wallet app.
 
 Before creating a validator, wait for your node to get fully synced. Once "catching_up" is "false", move on to the next step
