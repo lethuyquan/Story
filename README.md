@@ -251,7 +251,10 @@ cat $HOME/.story/story/config/private_key.txt
 Use this private key to import your account into a wallet, e.g. Metamask or Phantom. Add the odyssey testnet to your wallet via faucet. Then, copy your 'EVM address' from the wallet and request $IP tokens. Now you can see the balance and make transactions in the wallet app.
 
 Before creating a validator, wait for your node to get fully synced. Once "catching_up" is "false", move on to the next step
+```
 curl localhost:$(sed -n '/\[rpc\]/,/laddr/ { /laddr/ {s/.*://; s/".*//; p} }' $HOME/.story/story/config/config.toml)/status | jq
+```
+
 Create validator
 story validator create --stake 1500000000000000000000 --moniker $MONIKER --chain-id 1516 --private-key $(cat $HOME/.story/story/config/private_key.txt | grep "PRIVATE_KEY" | awk -F'=' '{print $2}')
 Remember to backup your validator priv_key from here:
