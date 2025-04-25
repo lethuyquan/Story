@@ -260,9 +260,11 @@ curl localhost:$(sed -n '/\[rpc\]/,/laddr/ { /laddr/ {s/.*://; s/".*//; p} }' $H
 story validator create --stake 1500000000000000000000 --moniker $MONIKER --chain-id 1516 --private-key $(cat $HOME/.story/story/config/private_key.txt | grep "PRIVATE_KEY" | awk -F'=' '{print $2}')
 ```
 
-Remember to backup your validator priv_key from here:
-
+**Remember to backup your validator priv_key from here:**
+```
 cat $HOME/.story/story/config/priv_validator_key.json
+```
+
 Firewall rules
 Configure firewall rules:
 
